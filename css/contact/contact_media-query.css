@@ -1,0 +1,313 @@
+@media (max-width: 1280px) {
+  .left764px {
+    left: 0px !important;
+  }
+  .contactsContainer {
+    position: absolute;
+    width: 100%;
+  }
+  .contactPage {
+    margin-left: 20px;
+  }
+  .contactDetailView {
+    left: 0px;
+  }
+  .contactDetailContainer {
+    position: absolute;
+    margin-left: calc((100vw - 232px) / 2);
+  }
+  .opacity0 {
+    display: none;
+    z-index: -1;
+  }
+  .headlineContact2 {
+    margin-bottom: 0;
+  }
+  .addContact {
+    flex-direction: column;
+    padding: 20px;
+    width: fit-content;
+  }
+  .addContactLeft {
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+    padding: 170px 300px 170px 35px;
+  }
+  .addContactRight {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    padding: 80px 48px 48px 48px;
+  }
+  .joinLogoAddContact {
+    display: none;
+  }
+  .ctcEditorRightFirst {
+    position: absolute;
+    top: 367px;
+    left: calc(50% - 80px);
+  }
+  .ctcEditorRightFirstResponsive {
+    top: 333px;
+    left: calc(50% - 112px);
+  }
+  .placeholderContact {
+    margin-left: 0;
+    margin-right: 0;
+    width: 160px;
+    height: 160px;
+    border: 2px solid white;
+  }
+  .createBtnContact {
+    margin-right: 0;
+  }
+  .headlineContactEditor {
+    font-weight: bold;
+    font-size: 55px;
+  }
+  
+  .newInitialSize {
+    height: 160px;
+    width: 160px;
+  }
+  .cnlAndCreateBtns {
+    justify-content: center;
+  }
+  .underline-edit-responsive {
+    width: 104px;
+  }
+  .backImg {
+    display: block;
+  }
+}
+@media (max-width: 910px) {
+  .backImg {
+    right: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .headlineContactContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+  .contactDetailView{
+    position: unset;
+  }
+  .headlineContact {
+    font-size: 56px;
+  }
+  .borderContact {
+    display: none;
+  }
+  .contactPage {
+    margin-left: 0px;
+  }
+  .underline-contacts-responsive {
+    display: block;
+  }
+  
+  .contactDetailContainer {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  .allContacts {
+    margin-bottom: 100px;
+  }
+  .addContactBtn {
+    width: 56px;
+    border-radius: 30px;
+    margin-top: 0;
+    bottom: 100px;
+    right: 15%;
+  }
+  .marginLeft {
+    margin-left: 7px;
+  }
+  .addContactBtn-hidden {
+    display: none;
+  }
+  .addContactLeft {
+    padding: 170px 180px 170px 35px;
+  }
+
+  .backImg {
+    top: 56px
+  }
+  .detailViewHead {
+    margin-left: 15px;
+  }
+  .detailView-box {
+    margin-left: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .editor-mobile {
+    display: flex;
+  }
+  .settings-editor {
+    display: flex;
+  }
+  .inputCtcContainer {
+    width: 300px;
+  }
+  .createBtnContact {
+    margin-right: 0;
+  }
+  .ctcEditorRightFirst {
+    left: calc(50% - 65px);
+    
+  }
+  .cancelBtnContactResponsive {
+    display: none;
+  }
+  .cnlAndCreateBtns {
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .placeholderContact {
+    width: 130px;
+    height: 130px;
+  }
+  .addContactRight {
+    padding: 60px 48px 32px 48px;
+  }
+  .underline {
+    height: 2px;
+    width: 66px;
+  }
+  .headlineContactEditor3 {
+    font-size: 15px;
+    font-weight: 300 !important;
+  }
+  .headlineContactEditor {
+    font-size: 45px;
+  }
+  .newInitialSize {
+    height: 130px;
+    width: 130px;
+  }
+  .addContactLeft {
+    padding: 170px 35px 170px 35px;
+  }
+  .edit-button-responsive {
+    font-size: 16px;
+  }
+  .underline-edit-responsive {
+    width: 85px;
+  }
+  .ctcEditorRightFirstResponsive {
+    left: calc(50% - 97px);
+  }
+}
+@media (max-width: 500px) {
+  .initalsDetailView {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 450px) {
+  #askToDelete{
+    width: 300px;
+    right: auto;
+  }
+  .checkCreateCtc {
+    height: 11px;
+    margin-left: 7px;
+  }
+  .headDetailView{
+    font-size: 20px;
+  }
+  .createBtnContact {
+    font-size: 16px;
+  }
+  .addContactLeft {
+    padding: 100px 35px 87px 35px;
+  }
+  .addContactRight {
+    padding: 60px 10px 20px 10px;
+  }
+  .ctcEditorRightFirst {
+    top: 200px;
+  }
+  .addContact {
+    padding: 10px;
+  }
+  .inputCtcContainer {
+    width: 280px;
+    margin-top: 20px;
+  }
+  .cnlAndCreateBtns {
+    margin-top: 25px;
+  }
+  .headlineContactEditor {
+    font-size: 36px;
+  }
+  .headlineContactEditor3 {
+    font-size: 13px;
+  }
+  .underline {
+    width: 57px;
+  }
+  .ctcEditorRightFirstResponsive {
+    top: 171px;
+    left: calc(50% - 63px);
+  }
+  .cnlSvgCtc {
+    margin-left: 7px;
+    height: 11px;
+  }
+  .underline-edit-responsive {
+    width: 69px;
+  }
+  .backImg{
+    right: -100px;
+  }
+  .initalsDetailView {
+    height: 80px;
+    width: 80px;
+    font-size: 35px;
+    margin-right: 24px;
+    margin-left: 0;
+  }
+  .newInitialSize {
+    height: 130px;
+    width: 130px;
+    font-size: 35px;
+    margin-left: 0;
+  }
+  .addContact {
+    padding: 0px;
+  }
+}
+@media (max-width: 420px) {
+  .headDetailView {
+    margin-bottom: 0 !important;
+  }
+  .checkCreateCtc {
+    height: 11px;
+    margin-left: 7px;
+  }
+  .backImg {
+    top: 46px;
+    right: -10px;
+  }
+  .headlineContact {
+    font-size: 44px;
+  }
+ 
+}
+
+@media (max-width: 350px) {
+  #askToDelete {
+    width: 265px;
+  }
+}
+
+@media (max-height: 905px) {
+  .addNewContactWrapper {
+    height: 700px;
+    overflow-y: auto;
+    border-radius: 32px;
+  }
+}

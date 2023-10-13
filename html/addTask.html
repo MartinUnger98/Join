@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Add Task</title>
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/addtask/addTask.css">
+    <link rel="stylesheet" href="../css/addtask/addTask-mediaquery.css">
+    <link rel="stylesheet" href="../css/contact/contacts.css">
+    <link rel="stylesheet" href="../css/contact/contact_media-query.css">
+    <link rel="icon" href="../img/join_logo.svg">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous">
+    </script>
+    <script src="../js/script.js"></script>
+    <script src="../js/miniBackend.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/addTask/addTask-templates.js"></script>
+    <script src="../js/addTask/addTask-task-creation.js"></script>
+    <script src="../js/addTask/addTask-addContact.js"></script>
+    <script src="../js/addTask/addTask.js"></script>
+    <script src="../js/addTask/addTask2.js"></script>
+</head>
+<body onload="init()">
+    <div w3-include-html="templates/header.html"></div>
+    <div w3-include-html="templates/menu.html"></div>
+
+    <form class="addTask-section" onsubmit="addTask('toDo');return false">
+      <h1>Add Task</h1>
+      <div class="task-creation-container d-flex">
+
+        <div class="task-content-box-left">
+          <div class="d-flex flex-column">
+            <label for="input" class="input-headlines fs-20">Title</label>
+            <input required class="fs-20 rounded-3 input"  id="input" type="text" placeholder="Enter a title">
+          </div>
+          
+          <div class="d-flex flex-column">   
+            <label for="textarea" class="input-headlines fs-20">Description</label>
+            <textarea class="fs-20 rounded-3" required id="textarea" name="" id="" cols="30" rows="10" placeholder="Enter a Description"></textarea>
+          </div>  
+          <div class="d-flex flex-column">
+           <span class="input-headlines fs-20">Assigned to</span>
+           <div id="contactWarning" class="warning-message d-none">Please select a contact</div>
+            <div class="select-btn dropBtnContacts rounded-3 d-flex align-items-center justify-content-between bg-white" id="contact_dropdown">
+              <span class="fs-20 dropdown-headline dropBtnContacts">Select contacts to assign</span>
+              <div class="subtask-buttons dropBtnContacts d-flex align-items-center justify-content-center">
+                <img class="dropBtnContacts" src="../img/arrow_drop_down.svg" alt="arrow_drop_down" id="drop_1">
+              </div>
+            </div>
+            <div class="assign-content rounded-3 bg-white" id="contacts">
+              <div id="contact_content" class="contacts-box d-flex flex-column position-relative"></div>
+              <div class="new-contact-btn rounded-3 d-flex justify-content-center align-items-center gap-3 position-relative" onclick="showContactEditor()">
+                <span class="text-white fw-semibold">Add new contact</span>
+                <img src="../img/person_add.svg" alt="" class="person_add-responsive">
+              </div>
+            </div>
+          </div>
+          <div id="selected_contacts" class="d-flex px-3 mb-responsive "></div>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="task-content-box-right">
+
+          <div class="d-flex flex-column">
+            <label for="date" class="input-headlines fs-20">Due date</label>
+            <input required class="fs-20 rounded-3 bg-white" id="date" type="date">
+          </div>
+          <div class="d-flex flex-column">
+            <span class="input-headlines fs-20">Prio</span>
+            <div id="prioWarning" class="warning-message d-none">Please select a priority</div>
+            <div class="priority d-flex justify-content-between">
+              <div class="priority-boxes bg-white rounded-3 d-flex align-items-center justify-content-center" id="urgent" onclick="togglePriority('urgent')">
+                <span class="fs-20 priority-sublines ">Urgent</span>
+                <img src="../img/urgent_red.svg" alt="urgent" id="urgent-img">
+              </div>
+              <div class="priority-boxes bg-white rounded-3 d-flex align-items-center justify-content-center" id="medium" onclick="togglePriority('medium')">
+                <span class="fs-20">Medium</span>
+                <img src="../img/medium_yellow.svg" alt="medium" id="medium-img">
+              </div>
+              <div class="priority-boxes bg-white rounded-3 d-flex align-items-center justify-content-center" id="low" onclick="togglePriority('low')">
+                <span class="fs-20">Low</span>
+                <img src="../img/low_green.svg" alt="low" id="low-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column">
+            <span class="input-headlines fs-20">Categories</span>
+            <div id="categoryWarning" class="warning-message d-none">Please select a category</div>
+            <div class="select-category selectDropdownBtn select-btn rounded-3 d-flex align-items-center justify-content-between bg-white" id="select">
+              <span class="fs-20 dropdown-headline selectDropdownBtn">Select Task Category</span>
+              <div class="subtask-buttons d-flex selectDropdownBtn align-items-center justify-content-center">
+                <img class="selectDropdownBtn" src="../img/arrow_drop_down.svg" alt="arrow_drop_down" id="drop_2">
+              </div>
+            </div>
+            <div class="category-content rounded-3 bg-white" id="content">
+              <ul class="options" id="options"></ul>
+            </div>
+          </div>
+
+          <div id="subtask-container" class="d-flex flex-column mt-32">
+            <label for="subtask" class="input-headlines fs-20">Subtasks</label>
+            <div class="subtask-add rounded-3 d-flex align-items-center justify-content-between bg-white" id="subtask-creator">
+              <input class="fs-20" type="text" placeholder="Add new subtask" id="subtask" onclick="openNewSubtask()">
+              <div id="new-subtask-field">
+                <div class="subtask-buttons d-flex align-items-center justify-content-center" onclick="openNewSubtask()">
+                  <img src="../img/add_addTask.svg" alt="plus" class="add">
+                </div>
+              </div>
+            </div>
+            <div class="subtask-box">
+              <ul id="subtask-content"></ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-buttons d-flex justify-content-end">
+        <button class="clear-button rounded-3 justify-content-center align-items-center bg-white" onclick="allMightyClear()">
+          <span class="fs-20">Clear</span>
+          <svg class="clear" width="13" height="14" viewBox="0 0 13 14"  xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.24959 6.99984L11.4926 12.2428M1.00659 12.2428L6.24959 6.99984L1.00659 12.2428ZM11.4926 1.75684L6.24859 6.99984L11.4926 1.75684ZM6.24859 6.99984L1.00659 1.75684L6.24859 6.99984Z" stroke="#2A3647" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <button type="submit" class="create-button rounded-3 d-flex justify-content-center align-items-center text-white">
+          <span>Create Task</span>
+          <img src="../img/check_addTask.svg" alt="" class="check-responsive">
+        </button>
+      </div>
+    </form>
+    <div id="contactOverlay" class="contactOverlay" onclick="closeEditorCtc()"></div>
+    <section id="addContact" class="addContact add-new-contact-position d-none"></section>
+</body>
+</html>

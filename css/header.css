@@ -1,0 +1,139 @@
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 96px;
+    padding: 20px 40px 20px 348px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px #0000001A;
+    z-index: 50;
+}
+.header-headline {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.frame42 {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+.bounding-box-help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+.help {
+    width: 45px;
+    height: 45px;
+}
+.help:hover {
+    width: 55px;
+    height: 55px;
+}
+.join-logo-header {
+    display: none;
+}
+
+.colorBlue {
+    color: #29ABE2;
+}
+
+.font-size25 {
+    font-size: 20px;
+}
+
+.user-profile-initials {
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ellipse {
+    width: 56px;
+    height: 56px;
+}
+
+#frame31 {
+    width: 50px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    top: 24px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50px;
+    gap: 10px;
+    right: 44px;
+    border: 2px solid black;
+}
+#frame31:hover {
+    background: linear-gradient(0deg, rgba(12, 46, 98, 0.12), rgba(12, 46, 98, 0.12)),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
+
+.bg-upI {
+    background: linear-gradient(0deg, rgba(12, 46, 98, 0.12), rgba(12, 46, 98, 0.12)),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
+
+#submenu {
+    position: fixed;
+    top: 97px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 20px 0px 20px 20px;
+    background-color: #2A3647;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1;
+}
+.submenu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.submenu-sections {
+    padding: 8px 16px 8px 16px;
+    text-decoration: none;
+    color: #CDCDCD;
+    cursor: pointer;
+}
+.submenu-sections:hover {
+    background-color: #2A3D59;
+    animation-name: hover;
+    animation-timing-function: ease-in ;
+    animation-duration: 100ms ;
+}
+
+@keyframes hover {
+    from {background-color: #2A3647;}
+    to { background-color: #2A3D59;}
+}
+
+@media (max-width: 850px) {
+    .header-headline {
+        display: none;
+    }
+    .join-logo-header {
+        display: block;
+    }
+    header {
+        padding: 20px 40px;
+    }
+}

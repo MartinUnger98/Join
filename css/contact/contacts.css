@@ -1,0 +1,489 @@
+.contactPage {
+  margin: 96px 0 0 232px;
+  display: flex;
+}
+.contactBody {
+  background-color: #F6F7F8;
+  overflow-x: hidden;
+}
+.headlineContact {
+  font-weight: bold;
+  font-size: 61px;
+  margin: 0;
+}
+.headlineContactContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 32px;
+}
+.headlineContact2 {
+  font-size: 24px;
+  margin: 0;
+}
+.borderContact {
+  height: 48px;
+  width: 3px;
+  background-color: #29ABE2;
+  margin: 0 16px 0 16px;
+}
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 500px;
+  height: calc(100vh - 96px);
+  overflow-y: auto;
+}
+.contactDetailContainer {
+  margin-top: 48px;
+  height: calc(100vh - 196px);
+}
+.addContactBtn {
+  width: 350px;
+  background-color: #2A3647;
+  color: white;
+  border-radius: 10px;
+  height: 56px;
+  margin-top: 32px;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.addContactBtn:hover {
+  background-color: #29ABE2;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.initalsDetailView-contact {
+  margin-right: 52px;
+}
+.contactOverlay {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  background-color: #B8B9BA;
+  opacity: 0;
+  transition: all 225ms ease-in-out;
+}
+
+.addNewContactWrapper {
+  position: relative;
+}
+
+.addNewContactWrapper::-webkit-scrollbar {
+  display: none;
+}
+.addContact {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: -6000px;
+  margin: 0 auto 0 auto;
+  width: 1200px;
+  justify-content: center;
+  transition: all 325ms ease-in-out;
+  top: 5vh;
+  height: 90vh;
+}
+.addContactLeft {
+  background-color: #2A3647;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 48px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+}
+.addContactRight {
+  background-color: white;
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  
+}
+.joinLogoAddContact {
+  width: 55px;
+  height: 66px;
+  margin-bottom: 32px;
+}
+.headlineContactEditor {
+  font-size: 45px;
+}
+.headlineContactEditor3 {
+  font-size: 18px;
+}
+.underline {
+  height: 3px;
+  width: 80px;
+  background-color: #29ABE2;
+}
+.underline-contacts-responsive {
+  height: 3px;
+  width: 72px;
+  background-color: #29ABE2;
+  display: none;
+  margin-top: 12px;
+}
+.ctcEditorRightFirst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ctcEditorRightSecond {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.marginLeft {
+  margin-left: 10px;
+}
+.placeholderContact {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 1px solid white;
+  background-color: #B8B9BA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 80px 0 32px;
+}
+.inputCtcContainer {
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 32px;
+  color: black;
+}
+.inputCtcContainer:focus-within {
+  border: 1px solid #29ABE2;
+}
+.inputCtc {
+  border: none;
+  width: 80%;
+  height: 50px;
+  outline: none;
+}
+::placeholder {
+  color: #E8E8E8;
+}
+.closeBtn {
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 48px;
+  right: 48px;
+}
+.closeBtn:hover {
+  background-color: #B8B9BA;
+}
+.cnlAndCreateBtns {
+  margin-top: 48px;
+  display: flex;
+}
+.cancelBtnContact {
+  height: 56px;
+  border: 1px solid #2A3647;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 24px;
+  margin-right: 32px;
+  padding: 16px;
+  cursor: pointer;
+}
+.askBtnDelete{
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #2A3647;
+  height: 32px;
+  width: 80px;
+}
+.askBtnDelete:hover{
+  border-color: #29ABE2;
+  color: #29ABE2;
+}
+.cnlSvgCtc {
+  margin-left: 16px;
+}
+.cancelBtnContact:hover .cnlSvgCtc path {
+  stroke: #29ABE2;
+}
+.cancelBtnContact:hover {
+  border: 1px solid #29ABE2;
+  color: #29ABE2;
+}
+.createBtnContact {
+  height: 56px;
+  border: 1px solid #2A3647;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2A3647;
+  font-size: 24px;
+  margin-right: 32px;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+}
+.createBtnContact:hover {
+  border: 1px solid #29ABE2;
+  background-color: #29ABE2;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.d-none {
+  display: none;
+}
+.checkCreateCtc {
+  margin-left: 16px;
+}
+.allContacts {
+  width: 310px;
+  margin: 88px 0 80px 0;
+}
+.initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background-color: aqua;
+  color: white;
+  font-size: 16px;
+  border: 2px solid white;
+}
+.contactLayout {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  height: 80px;
+  cursor: pointer;
+  margin-top: 5px;
+  border: none;
+  background-color: white;
+  width: 100%;
+}
+.contactLayout:hover {
+  background-color: #E8E8E8;
+  color: black;
+}
+.contactLayout:focus {
+  background-color: #2A3647;
+  color: white;
+}
+.infoOrder {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.categoryHead {
+  margin: 32px 0 32px 42px;
+  font-size: 24px;
+}
+.categoryBorder {
+  width: 100%;
+  background-color: lightgray;
+  height: 1px;
+}
+.detailViewHead {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+.initalsDetailView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  background-color: aqua;
+  color: white;
+  font-size: 48px;
+  border: 2px solid white;
+  margin: 0 80px 0 32px;
+}
+.detailView {
+  margin: 32px 0 32px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.h3DetailView {
+  margin: 16px 0 16px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.emailLink {
+  color: #409DF2;
+  text-decoration: none;
+}
+.emailLinkWithHover:hover {
+  font-weight: bold;
+}
+.detailButton {
+  border: none;
+  background-color: #F6F7F8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailButton:hover {
+  font-weight: bold;
+  color: #29ABE2;
+}
+.detailViewButton {
+  display: flex;
+  flex-direction: row;
+}
+.svgBtnDetailView {
+  margin-right: 10px;
+}
+.detailButton:hover .svgBtnDetailView path {
+  fill: #29ABE2;
+}
+.buttonSpace {
+  width: 64px;
+  margin-right: 16px;
+}
+.contactDetailView {
+  position: absolute;  
+  left: 100vw;
+  transition: all 125ms;
+}
+.backImg {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 5px;
+}
+.backImg img:hover {
+  scale: 1.3;
+  cursor: pointer;
+}
+.settings-editor {
+  height: 56px;
+  width: 56px;
+  border-radius: 30px;
+  margin-top: 0;
+  background-color: #2A3647;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.settings-editor img {
+  height: 40px;
+}
+.editor-mobile {
+  z-index: 1;
+  display: none;
+  background-color: white !important;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  padding: 17px 0 14px 20px;
+  border-radius: 20px 20px 0px 20px;
+  width: 110px;
+  height: 100px;
+  transform: translateX(250px);
+  transition: all 225ms ease-in;
+}
+.editor-mobile-shown {
+  transform: translateX(0);
+}
+.initalsDetailView-contact {
+  margin-right: 32px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #A8A8A8;
+  border-radius: 32px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #29ABE2;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+.left764px {
+  left: 764px !important;
+}
+.left100vw {
+  left: 100vw !important;
+}
+.displayFlex {
+  display: flex;
+}
+.backArrow {
+  position: absolute;
+  top: 50px;
+  right: 16px;
+}
+#askToDelete{
+  background-color: #2A3647;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 128px;
+  padding: 16px;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: -6;
+  opacity: 0;
+  transition: all 225ms ease-in-out;
+}
+.marginBotom32{
+  margin-bottom: 32px;
+}
+.yesNoOrder{
+  width: 100%;
+  justify-content: space-around;
+}
+.closeBtn svg path {
+  stroke: white;
+}
+.closeBtn svg {
+  margin-left: 1px;
+}
+.closeBtn:hover {
+  background-color: #29ABE2;
+}

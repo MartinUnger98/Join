@@ -1,0 +1,235 @@
+@media (max-width: 1240px) {
+   
+    h1 {
+        text-align: center;
+        margin-right: 110px;
+    }
+    .task-creation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .separator {
+      display: none;
+    }
+    .task-content-box-right {
+        display: flex;
+        flex-direction: column;
+        width: 390px;
+        margin: 0;
+    }
+    .task-content-box-left {
+        display: flex;
+        flex-direction: column;
+        width: 390px;
+        margin: 0;
+    }
+    .category-content {
+        top: 1006px;
+    }
+    .form-buttons {
+        margin-right: 36px;
+    }
+    .category-top {
+        top: 1052px;
+    }
+    .category-content {
+        position: static;
+        margin-top: -17px;
+    }
+    .mb-responsive {
+        margin-bottom: 25px;
+    }
+  
+    .assign-content {
+        position: static;
+        margin-top: -17px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0;
+    }
+    h1 {
+        text-align: left !important;
+        margin-right: 0;
+    }
+    .addTask-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 144px;
+        margin-bottom: 100px;
+    }
+    .category-content {
+        top: 1008px;
+    }
+    .assign-content {
+        top: 637px;
+    }
+    .clear-button {
+        display: none !important;
+    }
+    .form-buttons {
+        width: 390px;
+        margin-right: 0;
+    }
+    .task-creation-container {
+        margin-bottom: 50px;
+    }
+    .task-creation-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+@media (max-width: 420px) {
+    .task-content-box-left {
+        width: 300px;
+    }
+    .select-btn {
+        width: 300px;
+    }
+    .task-content-box-right {
+        width: 300px;
+    }
+    .priority-boxes {
+        width: 88px;
+        gap: 5px;
+        font-size: 16px !important;
+    }
+    .priority-boxes img {
+        width: 16px;
+    }
+    #urgent-img {
+        width: 16px;
+    }
+    .fs-responsive {
+        font-size: 16px;
+    }
+    .category-content {
+        width: 300px;
+        height: 109px;
+    }
+    .assign-content {
+        top: 591px;
+        width: 300px;
+        height: 258px;
+    }
+    h1 {
+        font-size: 47px !important;
+    }
+    .fs-20 {
+        font-size: 16px;
+    }
+    #input::placeholder {
+        font-size: 16px;
+    }
+    #textarea::placeholder {
+        font-size: 16px;
+    }
+    #subtask::placeholder {
+        font-size: 16px;
+    }
+    .form-buttons {
+        width: 300px;
+        height: 50px;
+    }
+    .add {
+        height: 10px;
+        width: 10px;
+    }
+    .subtask-buttons {
+        height: 20px;
+        width: 20px;
+    }
+    .clear-responsive {
+        width: 11px;
+        height: 10px;
+    }
+    .button-responsive {
+        width: 11px;
+    }
+    .check-responsive {
+        width: 11px;
+    }
+    .added_subtask img {
+        width: 14px;
+        height: 14px;
+    }
+    .added_subtask img:hover {
+        width: 15px;
+        height: 15px;
+    }
+    .trash-width {
+        width: 11px;
+        height: 18px;
+        margin-left: 1px;
+    }
+    .create-button {
+        font-size: 16px;
+    }
+    .category-top {
+        top: 970px;
+    }
+    .new-contact-btn {
+        font-size: 17px;
+    }
+    .person_add-responsive {
+        width: 27px;
+    }
+    .initials-selected {
+        height: 35px;
+        width: 35px;
+        font-size: 14px;
+    }
+}
+
+/* --------POPUP------- */
+
+:root {
+    --heightPopup: 55px;
+}
+
+.btnDark {
+    color: white;
+    background-color: #2a3647;
+    font-weight: 700;
+    font-size: 21px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+  }
+  .widthFit {
+    width: fit-content;
+    height: var(--heightPopup) ;
+  }
+
+  .popupAnimation {
+    position: fixed;
+    animation-name: popup;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    pointer-events: none;
+  }
+
+  #popup {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    z-index: 101;
+  }
+
+  @keyframes popup {
+    0% {
+      bottom: 0;
+    }  
+    100% {
+      bottom: calc(50vh - (var(--heightPopup) / 2));
+    }
+  }

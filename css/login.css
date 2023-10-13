@@ -1,0 +1,334 @@
+/* genereal */
+:root {
+  --heightBig: 334.07px;
+  --heightSmall: 121.97px;
+  --heightMobile: 78.03px; 
+  --widthBig: 274px;
+  --widthSmall: 100.03px;
+  --widthMobile: 64px; 
+  --heightPopup: 55px;
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  text-align: center !important;
+}
+
+input {
+  border: none;  
+  outline: none;
+  width: 250px;
+}
+
+::placeholder {
+  color: #D1D1D1;
+}
+
+h1 {
+  font-size: 61px !important;
+  margin-block-end: 0;
+  margin: 16px 16px 16px 16px !important;
+}
+
+footer a {
+  color: #A8A8A8;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #29ABE2;
+}
+
+/* generall pseudo classes */
+.positionAbsolute {
+  position: absolute;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.m-32 {
+  margin-bottom: 32px;
+}
+
+.widthFit {
+  width: fit-content;
+  height: var(--heightPopup) ;
+}
+
+.blueFont {
+  color: #29ABE2;
+  width: 165px;
+}
+
+.blueFont:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.separator {
+  background-color: #29ABE2;
+  width: 90px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.imgBox {
+  width: 25px;
+  height: 25px;
+}
+
+/* Log In */
+.showAfter2s {
+  visibility: hidden;
+  animation: hide 0s ease-in 1s;
+  animation-fill-mode: forwards;
+}
+
+.logo {
+  animation-name: zoom;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  height: 121.97px;
+  width: 100.03px;
+  left: 30px;
+  top: 30px;
+}
+
+.loginBackground {
+  margin-top: 145px;
+  justify-content: center;
+}
+
+.loginBox {
+  width: 652px;
+  box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  position: relative;
+}
+
+.signUp {
+  top: 67px;
+  right: 67px;
+  gap: 35px;
+}
+
+.noUserTxt {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.widthLoginbox {
+  width: 652px;
+}
+
+.rememberForgot {
+  align-items: center;
+  width: 95%;
+}
+
+/* sign up */
+.backImg {
+  top: 40px;
+  left: 40px;
+}
+
+.backImg img:hover {
+  scale: 1.3;
+  cursor: pointer;
+}
+
+.inputFields {
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+  padding: 5px;
+  width: 65%;  
+}
+
+/* forgot password */
+.loginBoxWide {
+  width: 832px;
+  box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+  margin-top: 50px;
+  position: relative;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+}
+
+.popupAnimation {
+  position: fixed;
+  animation-name: popup;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  pointer-events: none;
+}
+
+/* button designs */
+.btnRow {
+  gap: 35px;
+}
+
+.btnDark {
+  color: white;
+  background-color: #2a3647;
+  font-weight: 700;
+  font-size: 21px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.btnDark:disabled, .btnDark:disabled:hover  {
+  background-color: gray;
+  color: black;
+  cursor: not-allowed;
+}
+
+.btnDark:hover {
+  background-color: #29ABE2;
+}
+
+.btnLight {
+  color: #2a3647;
+  border: 2px solid #2A3647;
+  background-color: white;
+  font-weight: 700;
+  font-size: 21px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 177px;
+}
+
+.btnLight:hover {
+  color: #29ABE2;
+  border-color: #29ABE2;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3)
+}
+
+/* annimations */
+@keyframes zoom {
+  0%, 50% {
+    height: var(--heightBig);
+    width: var(--widthBig);
+    left: calc(50vw - (var(--widthBig) / 2));
+    top: calc(50vh - (var(--heightBig) / 2));
+  }  
+  100% {
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    left: 30px;
+    top: 30px;
+  }
+}
+
+@keyframes hide {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes popup {
+  0% {
+    bottom: 0;
+  }  
+  100% {
+    bottom: calc(50vh - (var(--heightPopup) / 2));
+  }
+}
+
+/* responsive classes */
+@media (max-width: 1030px) {
+  .signUp {
+    position: static;
+  }
+  @keyframes zoom {
+    0%, 50% {
+      height: var(--heightBig);
+      width: var(--widthBig);
+      left: calc(50vw - (var(--widthBig) / 2));
+      top: calc(50vh - (var(--heightBig) / 2));
+    }
+    
+    100% {
+      height: var(--heightMobile);
+      width: var(--widthMobile);
+      left: 30px;
+      top: 30px;
+    }    
+  }
+  .logo {
+    width: var(--widthMobile);
+    height: var(--heightMobile);
+    left: 30px;
+    top: 30px;
+  }
+  .loginBoxWide {
+    width: 600px;
+  }
+}
+
+@media (max-height: 720px) {
+  .signUp {
+    position: static;
+  }
+}
+
+@media (max-width: 670px) {
+  .signUp {
+    position: static;
+  }
+  .m-32 {
+    margin-bottom: 16px;
+  }
+  .loginBox, .loginBoxWide, .widthLoginbox {
+    width: 440px;
+  }
+  .backImg {
+    left: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+  .signUp {
+    position: static;
+  }
+  h1 {
+    font-size: 47px !important;
+    margin-top: 0px !important;
+  }
+  .btnDark, .btnLight {
+    font-size: 16px;
+  }
+  .btnRow, .signUp {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .h1 {
+    font-size: 40px !important;
+  }
+  .loginBox, .loginBoxWide, .widthLoginbox {
+    width: 320px;
+  }
+  .inputFields {
+    width: 95%;  
+  } 
+  .rememberForgot {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .backImg {
+    left: 12px;
+    top: 15px;
+  }
+}

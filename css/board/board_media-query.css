@@ -1,0 +1,218 @@
+@media (max-width: 1279px) {
+    .taskboard {
+        flex-direction: column;
+    }
+    .scroll-container {
+        display: flex;
+        flex: 1;
+        overflow-x: scroll;
+    }
+    .scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+    .board-direction {   
+        flex-direction: row; 
+        flex: 1;
+        gap: 48px;
+        min-height: 260px;
+        padding: 10px;
+    }
+    .board-direction:hover {
+        background-color: #eaeaea;
+    }
+    .no-task-container {
+        width: 180px;
+    }
+    .testcard {
+        justify-content: space-between;
+    }
+}
+@media (max-width: 1000px) {
+    .addTask-button {
+        display: none;
+    }
+    .add-button {
+        display: flex;
+    }
+    .headline {
+        flex-direction: column;
+    }
+    .new-headline {
+        width: 100%;
+        padding-right: 20px;
+    }
+    .new-headline-search {
+        width: 100%;
+        padding-right: 20px;
+        justify-content: flex-end;
+    }
+    .width-column {
+        width: auto;
+        padding-right: 26px;
+    }
+    .testcard {
+        min-width: 235px;
+        max-width: 240px;
+    }
+    .button-responsive {
+        display: none;
+    }
+    .hidden-button {
+        display: flex;
+    }
+
+   
+}
+@media (max-width: 800px) {
+    .taskboard {
+        margin-left: 24px;
+        height: auto;
+        margin-bottom: 82px;
+    }
+    .headline {
+        margin-top: 144px;
+        margin-left: 24px;
+    }
+    .new-headline {
+        margin-bottom: 32px;
+    }
+    .upDownBox {
+        display: block;
+    }
+}
+@media (max-width: 600px){
+    .search-container {
+        width: auto;
+        justify-content: space-between;
+        flex: 1;
+    }
+    .search-input {
+        flex: 1;
+    }
+}
+@media (max-width: 550px) {
+    .detailed-task {
+        width: 328px;
+        padding: 40px 20px;
+    }
+    .fs-61 {
+        font-size: 32px;
+    }
+    .detailed-priority {
+        font-size: 18px;
+        padding: 4px 18px;
+    }
+    .fs-responsive {
+        font-size: 16px;
+    }
+    .subtask::placeholder {
+        font-size: 16px;
+    }
+    .subtask {
+        width: 175px;
+    }
+    .priority-boxes {
+        width: 74px;
+    }
+    .priority-boxes img {
+        width: 11px;
+    }
+    .prio-fontsize-responsive {
+        font-size: 12px;
+    }
+    .subtask-buttons {
+        height: 20px;
+        width: 20px;
+    }
+    .select-editor img {
+        width: 10px;
+    }
+    .assign-content-editor {
+        height: 230px;
+    }
+    .person_add-responsive {
+        width: 27px;
+    }
+    .add {
+        height: 10px;
+        width: 10px;
+        margin-left: 1px;
+    }
+    .check-responsive {
+        width: 13px;
+    }
+    .button-responsive {
+        width: 11px;
+    }
+    .edit-input {
+        width: 166px;
+    }
+    .added-subtask-editor img {
+        width: 14px;
+        height: 14px;
+    }
+    .added-subtask-editor img:hover {
+        width: 15px;
+        height: 15px;
+    }
+    .trash-width {
+        width: 12px;
+        height: 18px;
+        margin-left: 1px;
+    }
+    .ok-button {
+        font-size: 16px;
+    }
+    .ok-button img {
+        width: 13px
+    }
+    
+}
+@media (max-width: 420px) {
+    h1 {
+        font-size: 47px !important;
+        margin-bottom: 0 !important;
+    }
+    .detailed-task {
+        width: 300px;
+    }
+    .editor-content {
+        padding: 0;
+    }
+    
+}
+@media (max-width: 380px) {
+    .new-headline-search {
+        padding-right: 15px;
+        width: auto;
+    }
+    .search-input {
+        width: 100%;
+    }
+    
+}
+@media (max-height: 905px) {
+    .addTask-responsive-height {
+        height: 600px;
+        overflow-y: scroll;
+    }
+    .addTask-responsive-height::-webkit-scrollbar {
+        display: none;
+    }
+    .addTask-section {
+        top: 24px;
+    }
+    .detailed-card-responsive-height {
+        height: 510px;
+        overflow-y: scroll;
+    }
+    .detailed-card-responsive-height::-webkit-scrollbar {
+        display: none;
+    }
+    .detailed-task {
+        height: 600px;
+    }
+    .detailed-card-editor-responsive-height {
+        height: 510px;
+    }
+}

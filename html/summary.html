@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Summary</title>
+    <link rel="icon" href="../img/join_logo.svg">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/summary.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+    <script src="../js/script.js"></script>
+    <script src="../js/miniBackend.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/summary.js"></script>
+    <script src="../js/contacts/contacts.js"></script>
+</head>
+
+<body class="summaryBody" onload="summaryInit()">
+    <div w3-include-html="templates/header.html"></div>
+    <div w3-include-html="templates/menu.html"></div>
+    <div class="summaryPage">
+        <div class="headlineSummary">
+            <h1 class="headlineSummary">Summary</h1>
+            <div class="borderHead"></div>
+            <h2 class="headlineSummar2">Everything in a nutshell</h2>
+        </div>
+        <div class="allSummaryContent">
+            <div class="summaryTaskContent">
+                <div class="taskOrder">
+                    <a class="taskSummary" href="board.html">
+                        <div id="numberOftaskInBoard" class="bigNumber">0</div><span class="spanSummary">Tasks in
+                            Board</span>
+                    </a>
+                    <a class="taskSummary" href="board.html">
+                        <div id="numberOftaskInProgress" class="bigNumber">0</div><span class="spanSummary">Tasks in
+                            Progress</span>
+                    </a>
+                    <a class="taskSummary" href="board.html">
+                        <div id="numberOftaskFeedback" class="bigNumber">0</div><span class="spanSummary">Awaiting
+                            Feedback</span>
+                    </a>
+                </div>
+                <a class="urgentAndDate" href="board.html">
+                    <div class="urgentCount"><img class="urgentImg" src="../img/urgent-icon-summary.svg">
+                        <div class="explanationOrder">
+                            <div id="numberOfUrgent" class="bigNumber">0</div><span class="spanSummary">Urgent</span>
+                        </div>
+                    </div>
+                    <div class="urgentBorder"></div>
+                    <div class="date"><span id="upcomingDeadline" class="spanDate">October 16, 2022</span><span>Upcoming
+                            Deadline</span></div>
+                </a>
+                <div class="toDOANdDoneContainer">
+                    <a href="board.html" onmouseover="changeIcon('../img/pencil-white-summary.svg')"
+                        onmouseout="changeIconBack('../img/pencil-blue-summary.svg')" class="toDOAndDone">
+                        <div class="urgentCount"><img id="toDoImg" class="iconBottom" src="../img/pencil-blue-summary.svg">
+                            <div class="explanationOrder">
+                                <div id="numberOfToDO" class="bigNumber">0</div><span class="spanSummary">To-Do</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="board.html" onmouseover="changeIcon('../img/check_white_summary.svg')"
+                        onmouseout="changeIconBack('../img/check-blue-summary.svg')" class="toDOAndDone">
+                        <div class="urgentCount"><img id="doneImg" class="iconBottom" src="../img/check-blue-summary.svg">
+                            <div class="explanationOrder">
+                                <div id="numberOfDone" class="bigNumber">0</div><span class="spanSummary">Done</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="morningContainer">
+                <h2 id="greetingContainer"></h2>
+                <h3 id="greetLoggedInUser" class="greetingName"></h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

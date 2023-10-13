@@ -1,0 +1,339 @@
+.headlineSummary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+}
+
+.borderHead {
+    height: 100%;
+    width: 3px;
+    background-color: #29ABE2;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.summaryPage {
+    margin-left: 280px;
+    margin-top: 144px;
+}
+
+.summaryBody {
+    background-color: #F6F7F8;
+}
+
+.headlineSummary {
+    font-weight: bold;
+    font-size: 61px;
+    margin: 0;
+}
+
+.headlineSummar2 {
+    font-size: 24px;
+    margin-block-end: 0px;
+}
+
+.allSummaryContent {
+    display: flex;
+    margin-top: 24px;
+}
+
+.taskOrder {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.taskSummary {
+    height: 150px;
+    width: 150px;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #dddddd;
+    transition: all .2s ease-in-out;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.taskSummary:hover {
+    background-color: #2A3647;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+.summaryTaskContent {
+    width: 500px;
+    height: 500px;
+}
+
+.bigNumber {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.spanSummary {
+    text-align: center;
+    font-size: 20px;
+}
+
+.morningContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 64px;
+}
+
+.urgentAndDate {
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-shadow: 0 0 10px #dddddd;
+    margin-top: 32px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.urgentAndDate:hover {
+    background-color: #2A3647;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+.greetingName {
+    color: #29ABE2;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.urgentCount {
+    display: flex;
+    align-items: center;
+}
+
+.urgentImg {
+    height: 60px;
+    width: 60px;
+}
+
+.explanationOrder {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 32px;
+}
+
+.urgentBorder{
+    background-color: #D1D1D1;
+    width: 3px;
+    height: 100px;
+    margin: 16px;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spanDate{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.toDOANdDoneContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.toDOAndDone{
+    height: 150px;
+    width: 47%;
+    border-radius: 28px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #dddddd;
+    transition: all .2s ease-in-out;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toDOAndDone:hover{
+    background-color: #2A3647;
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+.iconBottom{
+    height: 60px;
+    width: 60px;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media (max-width: 1200px) {  
+    .taskSummary {
+        height: 120px;
+        width: 120px;
+    }
+    .bigNumber {
+        font-size: 38px;
+    } 
+    .spanSummary {       
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1080px) {  
+    .taskSummary {
+        height: 120px;
+        width: 120px;
+    }    
+    .bigNumber {
+        font-size: 38px;
+    }    
+    .spanSummary {       
+        font-size: 16px;
+    }
+    .spanDate{
+        font-size: 20px;
+    }
+    .morningContainer {
+        position: absolute;
+        left: calc(50vw - 95px);
+        top: 50vh;
+        animation: fadeOut 1s ease-in-out 1s forwards;
+    }
+
+    .headlineSummary, .summaryTaskContent{
+       opacity: 0;
+       animation: fadeIn 1s ease-in-out 1s forwards;
+    }
+    
+}
+@media (max-width: 920px) {
+    .headlineSummary{
+        font-size: 47px;
+    }
+    .morningContainer{
+        margin-left: 30px;
+    }
+    .summaryPage {
+        margin-right: 20px;
+    }
+
+    .toDOAndDone{
+        height: 125px;
+    }
+  
+}
+
+@media (max-width: 800px) {
+    .allSummaryContent{
+        justify-content: center;
+        margin-top: 50px;
+    }
+     .headlineSummary{
+        flex-direction: column;
+        gap: 4px;
+    }
+    .summaryTaskContent {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .summaryPage{
+        margin-left: 24px;
+        margin-top: 115px;
+        margin-bottom: 100px;
+    }
+    .taskSummary {
+        height: 120px;
+        width: 120px;
+    }    
+    .bigNumber {
+        font-size: 38px;
+    }    
+    .spanSummary {       
+        font-size: 16px;
+    }
+    .spanDate{
+        font-size: 20px;
+    }
+    .toDOAndDone{
+        height: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    .iconBottom, .urgentImg {
+        width: 40px;
+        height: 40px;
+    }
+    .toDOAndDone {
+        width: 120px;
+        height: 120px;
+    }
+    .taskSummary {
+        width: 100px;
+        height: 98px;
+    }
+    .bigNumber {
+        font-size: 25px;
+    } 
+    .spanSummary {       
+        font-size: 14px;
+    }
+    .allSummaryContent {
+        margin-top: 0px;
+    }
+    .urgentCount {
+        padding-left: 4px;
+    }
+    .explanationOrder {
+        margin-left: 12px;
+    }
+    .toDOANdDoneContainer {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 370px) {
+    .taskSummary {
+        width: 80px;
+    }
+}

@@ -1,0 +1,27 @@
+<header>
+    <img src="../img/join_logo.svg" alt="join_logo" class="join-logo-header">
+    <span class="header-headline">Kanban Project Management Tool</span>
+    <div class="frame42">
+        <a href="../html/help.html" class="bounding-box-help">
+            <img src="../img/help-default.svg" alt="help-icon" class="help">
+        </a>      
+        <div id="userProfileInit" class="user-profile-initials" onclick="toggleSubmenu()">
+            <div id="frame31">
+                <b id="loggedInUser" class="colorBlue font-size25"></b>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="submenu" style="display: none;">
+    <div class="submenu-container">
+        <a class="submenu-sections" href="../html/legalNotice.html">
+            <span>Legal notice</span>
+        </a>
+        <a class="submenu-sections" href="../html/privatPolicy.html">
+            <span>Privacy Policy</span>
+        </a>
+        <a class="submenu-sections" onclick="logOut()">
+            <span>Log out</span>
+        </a>
+    </div>
+</div>
