@@ -33,21 +33,44 @@ function setIDForEditAndindex(id, i){
 
 
 /**
- * This function toggles the priority-boxes inside of the editor
- * @param {string} priority - 'priority-name'
- * @param {number} id - id of editor
- */
+ 
+* This function toggles between the selected priorities
+* @param {string} priority
+* @param {number} id
+*/
 function togglePriorityEditor(priority, id) {
-    let urgent = document.getElementById(`urgent-${id}`);
-    let medium = document.getElementById(`medium-${id}`);
-    let low = document.getElementById(`low-${id}`);
-    let urgentImg = document.getElementById(`urgent-img-${id}`);
-    let mediumImg = document.getElementById(`medium-img-${id}`);
-    let lowImg = document.getElementById(`low-img-${id}`);
-    toggle(priority, urgent, medium, urgentImg, mediumImg, low, lowImg);
+    resetPrioritiesInEditor(id);
+    let selectedDiv = document.getElementById(priority + "-" + id);
+    if (selectedDiv) {
+        selectedDiv.classList.remove("bg-white");
+        selectedDiv.classList.add(`bg-${priority}`);
+        let img = selectedDiv.querySelector('img');
+        if (img) {
+            img.src = `../img/${priority}_white.svg`;
+        }
+    }
 }
 
 
+/** 
+ 
+* This function clears every priority
+* @param {number} id
+*/
+function resetPrioritiesInEditor(id) {
+    const priorities = ["urgent", "medium", "low"];
+    priorities.forEach(priority => {
+        let div = document.getElementById(priority + "-" + id);
+        if (div) {
+            div.classList.remove(`bg-${priority}`);
+            div.classList.add("bg-white");
+            let img = div.querySelector('img');
+            if (img) {
+                img.src = `../img/${priority}_${priority === "urgent" ? "red" : priority === "medium" ? "yellow" : "green"}.svg`;
+            }
+        }
+    });
+}
 /**
  * This function determines the contact dropdown
  * @param {number} id - id of editor

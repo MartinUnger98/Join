@@ -121,14 +121,22 @@ function updateEditorWithSelectedPriorityBox(id, i) {
 function highlightPriorityBoxes(priority, urgent, urgentImg, medium, mediumImg, low, lowImg) {
     if (priority) {
         if (priority === 'Urgent') {
-            switchUrgent(urgent, urgentImg);
+            urgent.classList.remove('bg-white');
+            urgent.classList.add('bg-urgent');
+            urgentImg.src ='../img/urgent_white.svg';
         } else if (priority === 'Medium') {
-            switchMedium(medium, mediumImg);
+            medium.classList.remove('bg-white');
+            medium.classList.add('bg-medium');
+            mediumImg.src = '../img/medium_white.svg';
         } else if (priority === 'Low') {
-            switchLow(low, lowImg);
+            low.classList.remove('bg-white');
+            low.classList.add('bg-low');
+            lowImg.src = '../img/low_white.svg'
         }
     }
 }
+
+
 
 
 /**
