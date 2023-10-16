@@ -70,3 +70,22 @@ function switchCursorBack(cursor) {
 function changeBgBack(profileBackground) {
     profileBackground.classList.remove('bg-upI');
 }
+
+/**
+ * shows navbar and menu when a user is logged in
+ */
+function showNavbarMenu() {
+    document.getElementById('navbar-menu').classList.remove('d-none');
+    document.getElementById('userProfileInit').classList.remove('d-none');
+    document.getElementById('backToLoginBtn').classList.add('d-none');
+}
+
+
+/**
+ * hides navbar and menu when no one is logged in
+ */
+function hideNavbarMenu() {
+    document.getElementById('navbar-menu').classList.add('d-none');
+    document.getElementById('userProfileInit').classList.add('d-none');
+    document.getElementById('backToLoginBtn').classList.remove('d-none');
+}

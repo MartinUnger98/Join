@@ -19,6 +19,7 @@ async function init() {
     let path = window.location.pathname;
     checkLoginStatus(path);
     await includeHTML();
+    showOrHideNavbar(path);
     await loadData();    
     if (path.endsWith('/board.html') || path.endsWith('/addTask.html')) {
         loadAddTask();
@@ -211,9 +212,27 @@ function checkInput(event) {
  */
 function checkLoginStatus(path) {
     let status = sessionStorage.getItem('loginStatus');
-    if (!path.endsWith('/login.html') && !path.endsWith('/privatPolicy.html') && !path.endsWith('/legalNotice.html')) {
-        if (!status) {
+    if (!path.endsWith('/login.html') && !path.endsWith('/privatPolicy.html') && !path.endsWith('/legalNotice.html') && !path.endsWith('/help.html')) {
+        if (!status || status === "false") {
             window.location.href = 'login.html';
+        }
+    }
+    
+}
+
+
+/**
+ * shows or hides the navbar based on the login status
+ * @param {string} path 
+ */
+function showOrHideNavbar(path) {
+    let status = sessionStorage.getItem('loginStatus');
+    if (path.endsWith('/privatPolicy.html') || path.endsWith('/legalNotice.html') || path.endsWith('/help.html')) {
+        if (!status || status === "false") {
+            hideNavbarMenu();  
+        }
+        else {
+            showNavbarMenu();
         }
     }
 }

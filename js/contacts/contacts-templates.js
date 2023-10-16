@@ -88,7 +88,9 @@ function contactLayout(initials, contact, i) {
         <div id="initialLogo${i}" class="initials"><span>${initials}</span></div>        
         <div class="infoOrder">
             <span>${contact['name']}</span>
-            <a class="emailLink">${contact['email']}</a>
+            <div class="emailLink">
+                <a class="emailLinkText" >${contact['email']}</a>
+            </div>            
         </div>
     </button>
     `;

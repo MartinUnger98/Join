@@ -67,6 +67,11 @@ header {
     height: 56px;
 }
 
+.back-arrow:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
 #frame31 {
     width: 50px;
     display: flex;

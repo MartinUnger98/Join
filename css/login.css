@@ -17,7 +17,7 @@ body {
 input {
   border: none;  
   outline: none;
-  width: 250px;
+  flex: 1;
 }
 
 ::placeholder {

@@ -113,7 +113,7 @@
     margin-left: 0px;
   }
   .allContacts {
-    margin-bottom: 100px;
+    margin: 0px 0px 100px 0px;
   }
   .addContactBtn {
     width: 56px;
@@ -279,6 +279,10 @@
   .addContact {
     padding: 0px;
   }
+  .closeBtn {
+    top: 22px;
+    right: 10px;
+  }
 }
 @media (max-width: 420px) {
   .headDetailView {
@@ -295,7 +299,6 @@
   .headlineContact {
     font-size: 44px;
   }
- 
 }
 
 @media (max-width: 350px) {

@@ -340,9 +340,19 @@
   font-weight: bold;
 }
 .emailLink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 230px;
+}
+.emailLinkText {
   color: #409DF2;
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .emailLinkWithHover:hover {
   font-weight: bold;
 }
