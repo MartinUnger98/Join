@@ -1,3 +1,18 @@
+@media (max-width: 2500px) {
+    .taskboard {
+        margin-right: 20px;
+        margin-left: 280px;
+        max-width: 1640px;
+        gap: 20px;
+    }
+    .testcard {
+        min-height: 196px;
+    }
+    .width-column {
+        width: 226px;
+    }
+}
+
 @media (max-width: 1279px) {
     .taskboard {
         flex-direction: column;

@@ -109,9 +109,9 @@
 
         <section id="detailedTask" class="detailed-task position-absolute rounded-5 d-none" onclick="doNotClose(event)"></section>
 
-        <section id="bg" class="dimmed-bg position-fixed d-none" onclick="hideTasksOfBoard()"></section>
+        <section id="bg" class="dimmed-bg position-fixed d-none doNotCloseElement" onclick="hideTasksOfBoard()"></section>
       
-        <form id="board-addTask" class="addTask-section rounded-5 d-none addTask-responsive-height" onsubmit="addTask('toDo');return false" onclick="doNotClose(event) ">
+        <form id="board-addTask" class="addTask-section rounded-5 d-none addTask-responsive-height" onsubmit="addTask('toDo');return false" onclick="doNotCloseAddTask(event) ">
             <h1 class="h1-addTask">Add Task</h1>
             <div class="task-creation-container d-flex">
       
@@ -128,10 +128,10 @@
                 <div class="d-flex flex-column">
                   <span class="input-headlines fs-20">Assigned to</span>
                   <div id="contactWarning" class="warning-message d-none">Please select a contact</div>
-                   <div class="select-btn rounded-3 d-flex align-items-center justify-content-between bg-white" onclick="toggleDropdown('contact')" id="contact_dropdown">
-                     <span class="fs-20">Select contacts to assign</span>
-                     <div class="subtask-buttons d-flex align-items-center justify-content-center">
-                       <img src="../img/arrow_drop_down.svg" alt="arrow_drop_down" id="drop_1">
+                   <div class="select-btn rounded-3 d-flex align-items-center justify-content-between bg-white dropBtnContacts" id="contact_dropdown">
+                     <span class="fs-20 dropBtnContacts">Select contacts to assign</span>
+                     <div class="subtask-buttons d-flex align-items-center justify-content-center dropBtnContacts">
+                       <img class="dropBtnContacts" src="../img/arrow_drop_down.svg" alt="arrow_drop_down" id="drop_1">
                      </div>
                    </div>
                    <div class="assign-content rounded-3 bg-white position-absolute" id="contacts">
@@ -174,10 +174,10 @@
                 <div class="d-flex flex-column">
                   <span class="input-headlines fs-20">Categories</span>
                   <div id="categoryWarning" class="warning-message d-none">Please select a category</div>
-                  <div class="select-btn rounded-3 d-flex align-items-center justify-content-between bg-white" id="select" onclick="toggleDropdown('category')">
-                    <span class="fs-20">Select Task Category</span>
-                    <div class="subtask-buttons d-flex align-items-center justify-content-center">
-                      <img src="../img/arrow_drop_down.svg" alt="arrow_drop_down" id="drop_2">
+                  <div class="select-btn rounded-3 d-flex align-items-center justify-content-between bg-white selectDropdownBtn" id="select">
+                    <span class="fs-20 selectDropdownBtn">Select Task Category</span>
+                    <div class="subtask-buttons d-flex align-items-center justify-content-center selectDropdownBtn">
+                      <img class="selectDropdownBtn" src="../img/arrow_drop_down.svg" alt="arrow_drop_down" id="drop_2">
                     </div>
                   </div>
                   <div class="category-content rounded-3 bg-white position-absolute" id="content">

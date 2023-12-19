@@ -371,4 +371,14 @@ function getTaskBelow(id){
     let status = statusTasks[statusTasks.indexOf(currentStatus) - 1];
     moveTo(status);
  }
+ 
 
+/**
+ * This function makes sure that the detailed Task is still clickable
+ * @param {symbol} event 
+ */
+function doNotCloseAddTask(event) {
+    if (event.target.matches('.doNotCloseElement')) {
+        event.stopPropagation();
+    }
+}
