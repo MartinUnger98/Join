@@ -96,7 +96,7 @@ function showDetailedTask(title, category, description, priority,prioImg, date, 
                     <img src="../img/clear.svg" alt="clear" class="clear-img">
                 </div>
             </div>
-            <span class="fw-bold fs-61">${title}</span>
+            <span class="fw-bold fs-61 wordwrap">${title}</span>
             <span class="fs-20 fs-responsive wordwrap">${description}</span>
             <div class="d-flex fs-20 column-gap-3 fs-responsive">
                 <span class="detail-color">Due date:</span>
