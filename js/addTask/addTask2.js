@@ -70,7 +70,7 @@ function switchPriorityButtonsToNormal(urgent, medium, low, urgentImg, mediumImg
 function clearUrgent(urgent, urgentImg) {
     urgent.classList.add('bg-urgent');
     urgent.classList.add('bg-white');
-    urgentImg.src = '..img/urgent_red.svg';
+    urgentImg.src = '../img/urgent_red.svg';
 }
 
 
@@ -83,7 +83,7 @@ function clearUrgent(urgent, urgentImg) {
 function clearMedium(medium, mediumImg) {
     medium.classList.add('bg-medium');
     medium.classList.add('bg-white');
-    mediumImg.src = '..img/medium_yellow.svg';
+    mediumImg.src = '../img/medium_yellow.svg';
 }
 
 
@@ -96,7 +96,7 @@ function clearMedium(medium, mediumImg) {
 function clearLow(low, lowImg) {
     low.classList.add('bg-low');
     low.classList.add('bg-white');
-    lowImg.src = '..img/low_green.svg';
+    lowImg.src = '../img/low_green.svg';
 }
 
 

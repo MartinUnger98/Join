@@ -102,7 +102,13 @@ h1 {
 }
 .title {
     max-width: 264px;
+    word-wrap: break-word;
 }
+
+.wordwrap {
+    word-wrap: break-word;
+}
+
 .detailed-task {
     z-index: 101;
     width: 525px;
@@ -166,8 +172,6 @@ h1 {
     height: 100%;
     display: flex;
 }
-
-/* -----------von Martin---------- */
 
 .taskUp {
     rotate: 90deg;

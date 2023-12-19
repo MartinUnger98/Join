@@ -30,7 +30,7 @@ function showAddedTasks(title, category, description, priority, amountOfSubtasks
             `: ''}
             <div class="d-flex flex-column row-gap-1">
                 <span class="fw-bold detail-color title">${title}</span>
-                <span class="description-color">${description}</span>
+                <span class="description-color wordwrap">${description}</span>
             </div>
             ${amountOfSubtasks > 0 ? /*html*/` 
                 <div class="subtask-container d-flex align-items-center justify-content-between">
@@ -97,7 +97,7 @@ function showDetailedTask(title, category, description, priority,prioImg, date, 
                 </div>
             </div>
             <span class="fw-bold fs-61">${title}</span>
-            <span class="fs-20 fs-responsive">${description}</span>
+            <span class="fs-20 fs-responsive wordwrap">${description}</span>
             <div class="d-flex fs-20 column-gap-3 fs-responsive">
                 <span class="detail-color">Due date:</span>
                 <span>${date}</span>
@@ -180,7 +180,7 @@ function showDetailedCardEditor(title, description, formattedDate, id, i) {
             <div class="editor-content">
                 <div class="d-flex flex-column">
                     <label for="input-editor-${id}" class="input-headlines fs-20 fs-responsive">Title</label>
-                    <input class="fs-20 rounded-3 input fs-responsive" required id="input-editor-${id}" type="text" placeholder="Enter a title" value="${title}">
+                    <input maxlength="40" class="fs-20 rounded-3 input fs-responsive" required id="input-editor-${id}" type="text" placeholder="Enter a title" value="${title}">
                 </div>
                 <div class="d-flex flex-column">   
                     <label for="textarea-editor-${id}" class="input-headlines fs-20 fs-responsive">Description</label>
